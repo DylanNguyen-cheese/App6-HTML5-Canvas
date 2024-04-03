@@ -36,14 +36,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script> //functions for this program follow: 
 
-function drawRect()
-	var a_canvas = document.getElementById('a');
-	var a_context = a_canvas.getContext('2d');
-	a_context.font='bold 30px arial'; 
+function drawRect() { // this function will draw a rectangle
+	var a_canvas = document.getElementById('a'); // get canvas with id"a"
+	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+	a_context.fillStyle = "#92B89F"; // makes rectangle a sage green color
+	a_context.fillRect(10,10,150,100); // this code creates a filled rectangle on the canvas at position 10,10
+}; 
+
+function myName(){ // function that will display my name, "Dylan"
+	var a_canvas = document.getElementById('a'); // get canvas with id"a"
+	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+	a_context.font='bold 30px arial'; // 
 	a_context.fillStyle = '#000000"; 
 	a_context.textBaseline = 'bottom'; 
 	a_context.textAlign = 'left'; 
 	a_context.fillText('Dylan N', 5,220); 
+}; 
+
+function makeImage() { // this functions generates an image of a capybara 
+	var a_canvas = document.getElementById('a'); // get canvas with id"a"
+	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+	var capybara_image = document.getElementById('capybaras;) // assigns capybara to variable capybara_image
+	a_context.drawImage(capybara_image, 130, 110, 150, 100); // functions draws capybara_image on to canvas
+}; 
+
+function clearCanvas() { // this function clears the canvas
+	var a_canvas = document.getElementById('a'); // get canvas with id"a"
+	a_canvas.width = a_canvas.width; // this function causes the canvas to clear
+}; 
 	
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.

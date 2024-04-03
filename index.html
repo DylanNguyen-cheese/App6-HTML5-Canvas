@@ -90,20 +90,32 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     left: 0vw;
     z-index: 1;
 }
+.hidden { // allows for capybara_image to be hidden
+	 display: none; 
+}
+	
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+<div id="header" class="w3-container w3-flat-carrot"> <!-- header is orange --> 
+	<h1>App6---HTML5-Canvas</h1> <!-- title --> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>This website has a canvas that can be controlled by buttons. Use the buttons to see how they change the canvas.</p>
 		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!-- disclaimer for the user -->
+   <canvas id='a' width='300' height="225" style="border:1px solid #000000;"></canvas> <!-- Creates canvas with a border -->
+   <p></p> <!-- Creates line of space between canvas and buttons -->
+   <a onclick="drawRect();" class="w3-btn w3-grey w3-round"> Draw Rectangle</a> <!--Creates button that draws a rectangle when pressed.-->
+   <a onclick="myName();" class="w3-btn w3-grey w3-round"> Prints My Name</a> <!--Create button that draws name when pressed.-->
+   <img id='dogs' src='imagesApp6/dog_photo.jpg' alt='Image of Dogs' class='hidden' width='144' height='90'> <!-- Image of capybara is hidden -->
+   <a onclick="makeImage();" class="w3-btn w3-grey w3-round"> Load Image</a> <!--Creates button, causing image to appear on canvas-->
+   <a onclick="clearCanvas();" class="w3-btn w3-grey w3-round"> Clear Canvas</a> <!--Creates button that clears the canvas-->
+   <p><br><br></p> <!-- Creating lines of space between buttons and footer-->
+</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>

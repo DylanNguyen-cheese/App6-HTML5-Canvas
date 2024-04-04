@@ -35,35 +35,44 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script> //functions for this program follow: 
+function drawRect() { // function that draws a rectangle
+   var a_canvas = document.getElementById('a'); // get canvas with id"a"
+   var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+   a_context.fillStyle = "#92B89F"; // makes rectangle a sage green color
+   a_context.fillRect(10,10,150,100); // this code creates a filled rectangle on the canvas at position (10,10)
+	
+};
 
-function drawRect() { // this function will draw a rectangle
-	var a_canvas = document.getElementById('a'); // get canvas with id"a"
-	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
-	a_context.fillStyle = "#92B89F"; // makes rectangle a sage green color
-	a_context.fillRect(10,10,150,100); // this code creates a filled rectangle on the canvas at position 10,10
-}; 
-
-function myName(){ // function that will display my name, "Dylan"
-	var a_canvas = document.getElementById('a'); // get canvas with id"a"
-	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
-	a_context.font='bold 30px arial'; // 
-	a_context.fillStyle = '#000000"; 
-	a_context.textBaseline = 'bottom'; 
-	a_context.textAlign = 'left'; 
-	a_context.fillText('Dylan N', 5,220); 
+function myName() { // function that displays "Dylan"
+   var a_canvas = document.getElementById('a'); // get canvas with id"a"
+   var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+   a_context.font='bold 30px arial'; // 
+   a_context.fillStyle = '#000000";
+   a_context.textBaseline = 'bottom'; // aligns text at bottom of canvas
+   a_context.textAlign = 'left'; // centers the text on the canvas
+   a_context.fillText('Dylan N', 5,220); // prints out my name on the canvas
+	
 }; 
 
 function makeImage() { // this functions generates an image of a capybara 
-	var a_canvas = document.getElementById('a'); // get canvas with id"a"
-	var a_context = a_canvas.getContext('2d'); // makes canvas 2d
-	var capybara_image = document.getElementById('capybaras;) // assigns capybara to variable capybara_image
-	a_context.drawImage(capybara_image, 130, 110, 150, 100); // functions draws capybara_image on to canvas
+   var a_canvas = document.getElementById('a'); // get canvas with id "a"
+   var a_context = a_canvas.getContext('2d'); // makes canvas 2d
+   var capybara_image = document.getElementById('capybaras'); // assigns capybara to variable capybara_image
+   a_context.drawImage(capybara_image, 130, 110, 150, 100); // functions draws capybara_image on to canvas
+	
 }; 
 
 function clearCanvas() { // this function clears the canvas
 	var a_canvas = document.getElementById('a'); // get canvas with id"a"
 	a_canvas.width = a_canvas.width; // this function causes the canvas to clear
+function clearCanvas() { //this function  clears the canvas
+   var a_canvas = document.getElementById('a'); // get canvas with id"a"
+   a_canvas.width = a_canvas.width; // this function causes the canvas to clear
 }; 
+
+</script>
+
+
 	
 <style>	
 .body {
@@ -95,7 +104,7 @@ function clearCanvas() { // this function clears the canvas
 </div>
 	
 <div id="content" class="w3-container">
-	<p>This website has a canvas that can be controlled by buttons. Use the buttons to see how they change the canvas.</p>
+	<p>This website has a canvas that can be controlled by buttons. Press the buttons to see how they change the canvas.</p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
